@@ -2,24 +2,26 @@
 using namespace std;
 
 int main(void) {
-	int a, b, temp,cnt;
+	//ios::sync_with_stdio(0);
+	//cin.tie(0);
+
+	long long a, b, temp;
+	long long n = 0;
 	cin >> a >> b;
-	
+
 	if (a > b) {
-		temp = a;
-		a = b;
-		b = temp;
+		temp = b;
+		b = a;
+		a = temp;
 	}
-	if (a != b) {
-		cnt = b - a - 1;
-	}
+
+	if (a == b || (b-a == 1)) cout << 0;
 	else {
-		cnt = 0;
+		n = b - a - 1;
+		cout << n << '\n';
+		for (long long i = a+1;i < b;++i) {
+			cout << i << ' ';
+		}
 	}
-
-	cout << cnt<<'\n';
-
-	for (int i = a+1;i < b;i++) {
-		cout << i << ' ';
-	}
+	return 0;
 }
