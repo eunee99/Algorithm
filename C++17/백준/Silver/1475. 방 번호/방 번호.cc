@@ -3,9 +3,7 @@
 using namespace std;
 
 int main(void) {
-	char num[10];
 	int cnt[10] = { 0 };
-	int val;
 
 	string N;
 	cin >> N;
